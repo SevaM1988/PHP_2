@@ -63,4 +63,13 @@ class Product
     {
         $this->material = $material;
     }
+
+    public function view () {
+        $a = 'Product price - '.$this->price;
+        $b = 'Product size - '.$this->size;
+        $c = 'Product color - '.$this->color;
+        $d = 'Product material - '.$this->material;
+
+        echo "$a<br>$b<br>$c<br>$d<br>";
+    }
 }
