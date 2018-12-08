@@ -1,0 +1,39 @@
+<style>
+    .container {
+        width: 1100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    a {
+        width: 250px;
+        height: 150px;
+        margin: 5px 0;
+        cursor: pointer;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: border-color, box-shadow, 0.5s;
+    }
+
+    img {
+        width: inherit;
+        height: inherit;
+        border-radius: 5px;
+    }
+
+    a:hover {
+        border-color: gold;
+        box-shadow: 0 0 20px rgba(229, 187, 13, 1);
+    }
+</style>
+
+<div class="container">
+
+    {% for img in gallery %}
+        <a href="index.php?id={{ img.id }}"><img src="{{ img.src }}" alt="{{ img.name }}"></a>
+    {% endfor %}
+
+</div>

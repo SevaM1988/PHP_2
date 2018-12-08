@@ -1,0 +1,21 @@
+<style>
+    .container {
+        width: 1100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    img {
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+</style>
+
+<div class="container">
+    <h3>{{ image.name }}</h3>
+    <img src="{{ image.src }}" alt="{{ image.name }}" height="700px">
+    <p>Размер изображения: {{ image.size }} КБ</p>
+</div>
